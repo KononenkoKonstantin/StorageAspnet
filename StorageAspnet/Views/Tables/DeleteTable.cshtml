@@ -1,0 +1,16 @@
+﻿@model StorageAspnet.Models.ModelTable
+@{
+    ViewBag.Title = "DeleteTable";
+}
+
+<h2>Delete Table from Azure Storage</h2>
+
+@using (Html.BeginForm("DeletingTable", "Tables", FormMethod.Post))
+{
+    @Html.TextBoxFor(model => model.Name);
+    @Html.ValidationMessageFor(model => model.Name);
+    <button type="submit">Delete</button>
+}
+
+
+

@@ -1,0 +1,14 @@
+﻿@model StorageAspnet.Models.ModelTable
+@{
+    ViewBag.Title = "SelectTable";
+}
+
+<h2>Select Table</h2>
+
+@using (Html.BeginForm("AddingTable", "Tables", FormMethod.Post))
+{
+    @Html.Label("Input table name");
+    @Html.TextBoxFor(model => model.TableName);
+    @Html.ValidationMessageFor(model => model.TableName);
+    <button type="submit">Select Table</button>
+}

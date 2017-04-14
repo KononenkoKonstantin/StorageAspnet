@@ -1,0 +1,15 @@
+﻿@model StorageAspnet.Models.ModelTable
+@{
+    ViewBag.Title = "CreateTable";
+}
+
+<h2>Create Table in Azure Storage</h2>
+@using (Html.BeginForm("CreatingTable", "Tables", FormMethod.Post))
+{
+    @Html.TextBoxFor(model => model.TableName);
+    @Html.ValidationMessageFor(model => model.TableName);
+    <button type="submit">Create Table</button>
+}
+
+
+
